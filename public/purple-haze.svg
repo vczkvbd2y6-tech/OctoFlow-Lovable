@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="100" />
+    </filter>
+    <radialGradient id="purpleHaze1" cx="20%" cy="20%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.25" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="purpleHaze2" cx="80%" cy="60%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="purpleHaze3" cx="50%" cy="80%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:0.18" />
+      <stop offset="60%" style="stop-color:#6d28d9;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Base dark background -->
+  <rect width="1920" height="1080" fill="#0f0a1a" />
+  
+  <!-- Purple haze layers -->
+  <circle cx="384" cy="216" r="800" fill="url(#purpleHaze1)" filter="url(#blur)" />
+  <circle cx="1536" cy="648" r="700" fill="url(#purpleHaze2)" filter="url(#blur)" />
+  <circle cx="960" cy="900" r="600" fill="url(#purpleHaze3)" filter="url(#blur)" />
+  
+  <!-- Additional crisp gradient overlay -->
+  <defs>
+    <linearGradient id="crispGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.06" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:0.03" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#crispGradient)" />
+</svg>
