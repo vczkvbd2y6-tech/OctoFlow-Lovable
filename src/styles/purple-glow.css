@@ -1,0 +1,52 @@
+/* Purple Glow Pulsating Animation */
+@keyframes purpleGlowPulse {
+  0% {
+    opacity: 0.1;
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.1);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 10px 5px rgba(168, 85, 247, 0.08);
+  }
+  100% {
+    opacity: 0.1;
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+  }
+}
+
+.purple-glow {
+  animation: purpleGlowPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 15px 8px rgba(168, 85, 247, 0.12);
+}
+
+/* Alternative shimmer effect for more dynamic feel */
+@keyframes purpleShimmer {
+  0% {
+    background-position: -1000px 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 1000px 0;
+    opacity: 0;
+  }
+}
+
+/* Enhanced glow with additional brightness */
+.purple-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(168, 85, 247, 0.8) 50%, 
+    transparent
+  );
+  filter: blur(1px);
+  animation: purpleGlowPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

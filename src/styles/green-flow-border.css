@@ -1,0 +1,25 @@
+.green-flow-border-wrapper {
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #10b981, #34d399, #6ee7b7, #34d399, #10b981);
+  background-size: 300% 300%;
+  animation: green-flow 4s ease infinite;
+}
+
+.green-flow-border-inner {
+  border-radius: calc(0.75rem - 2px);
+  height: 100%;
+}
+
+@keyframes green-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
